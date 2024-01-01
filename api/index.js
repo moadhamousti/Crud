@@ -9,10 +9,6 @@ app.use(express.json())
 app.use(express.static('public'));
 
 
-module.exports=(req,res)=>{
-  res.status(200).send("hello")
-}
-
 
 app.use(cors(
   {
