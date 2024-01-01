@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 app.use(cors(
   {
-    origin: [""],
+    origin: ["https://crud-rho-eight.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
   }
