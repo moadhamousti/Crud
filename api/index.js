@@ -22,7 +22,18 @@ app.use(cors(
 
 
 
-mongoose.connect('mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/test', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+})
+.then(() => {
+  console.log("MongoDB connected successfully");
+})
+.catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
+
 // Don45Wf6u8ely3jo
 // mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/?retryWrites=true&w=majority
 
