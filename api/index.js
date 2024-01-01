@@ -27,11 +27,7 @@ app.use(cors(
 
 
 
-mongoose.connect('mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/test', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-})
+mongoose.connect('mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/test')
 .then(() => {
   console.log("MongoDB connected successfully");
 })
