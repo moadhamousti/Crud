@@ -1,15 +1,17 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "client/**", "use": "@vercel/static" },
-    { "src": "client/public/**", "use": "@vercel/static" },
-    { "src": "client/src/**/*.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/client/$1",
-      "cleanUrls": true
+    "version": 2,
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { 
+        "src": "/api/(.*)", 
+        "dest": "/api/index.js" 
+      }
+    ],
+    "functions": {
+      "api/functions/**/*.js": {
+        "runtime": "nodejs14.x"
+      }
     }
-  ]
-}
+  }
