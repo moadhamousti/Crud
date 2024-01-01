@@ -12,8 +12,12 @@ app.use(express.static('public'));
 
 app.use(cors(
   {
-    origin: ["https://crud-rho-eight.vercel.app/"],
-    methods: ["POST", "GET"],
+    origin: [
+      "https://crud-coral-five.vercel.app",
+      "https://crud-coral-five.vercel.app/create",
+      "https://crud-coral-five.vercel.app/update-user/:id",
+    ],
+    methods: ["POST", "DELETE", "GET", "DELETE", "PUT"],
     credentials: true
   }
 ));
