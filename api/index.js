@@ -18,6 +18,10 @@ app.use(cors(
 ));
 
 
+module.exports=(req,res)=>{
+  res.status(200).send("hello")
+}
+
 
 
 mongoose.connect('mongodb+srv://Crud_App:Don45Wf6u8ely3jo@cluster0.sogcdsk.mongodb.net/?retryWrites=true&w=majority')
