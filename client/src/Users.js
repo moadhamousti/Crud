@@ -23,6 +23,10 @@ export default function Users() {
 
   return (
     <main>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
       <div class="container">
       <div class="sidebar">
         <h1> <span>|</span> CRUD OPERATIONS</h1>
@@ -30,10 +34,10 @@ export default function Users() {
           <img src={photo} alt="Admin Image"></img>
         </div>
         <p>Karthi Madesh</p>
-        <div to="/" className="icon-container">
+        <Link to="/" className="icon-container">
           <i class="fas fa-home"></i>
           <span>Home</span>
-        </div>
+        </Link>
         <div to="/login" className="icon-container-1">
           <span>Logout </span>
           <i class="fas fa-sign-out-alt"></i>
