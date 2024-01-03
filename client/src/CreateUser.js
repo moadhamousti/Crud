@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import photo from './images/photo.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,16 +29,20 @@ export default function CreateUser() {
 
   return (
     <div className="container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
       <div className="sidebar">
         <h1> <span>|</span> CRUD OPERATIONS</h1>
         <div className="image-container">
           <img src={photo} alt="Admin Image" />
         </div>
         <p>Karthi Madesh</p>
-        <div to="/" className="icon-container">
-          <i className="fas fa-home"></i>
+        <Link to="/" className="icon-container">
+          <i class="fas fa-home"></i>
           <span>Home</span>
-        </div>
+        </Link>
         <div to="/login" className="icon-container-1">
           <span>Logout </span>
           <i className="fas fa-sign-out-alt"></i>
