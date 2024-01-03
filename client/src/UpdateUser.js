@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import photo from './images/photo.png';  // Add the correct path to your photo
+import { Link } from 'react-router-dom';
 
 export default function UpdateUser() {
   const { id } = useParams();
@@ -39,16 +40,20 @@ export default function UpdateUser() {
 
   return (
     <div className="container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
       <div className="sidebar">
         <h1> <span>|</span> CRUD OPERATIONS</h1>
         <div className="image-container">
           <img src={photo} alt="Admin Image" />
         </div>
         <p>Karthi Madesh</p>
-        <div to="/" className="icon-container">
-          <i className="fas fa-home"></i>
+        <Link to="/" className="icon-container">
+          <i class="fas fa-home"></i>
           <span>Home</span>
-        </div>
+        </Link>
         <div to="/login" className="icon-container-1">
           <span>Logout </span>
           <i className="fas fa-sign-out-alt"></i>
