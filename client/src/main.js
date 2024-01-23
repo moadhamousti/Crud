@@ -6,4 +6,4 @@ ReactDOM.createRoot(document.getElementById('react')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+); 
