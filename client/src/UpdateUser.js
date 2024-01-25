@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import photo from './images/photo.png';  // Add the correct path to your photo
